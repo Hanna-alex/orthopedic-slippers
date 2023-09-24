@@ -1,0 +1,108 @@
+.selection
+  padding: 11px 0
+  &__trust-box
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__title
+    font-size: 19px
+    text-transform: uppercase
+    margin-bottom: 20px
+
+.trust-box
+  font-size: 12px
+  margin-bottom: 20px
+  &__icon
+    width: 71px
+    height: 17px
+  &__title
+    color: $color-green
+    text-decoration: underline
+
+.slides
+  border-radius: 20px
+  margin-bottom: 20px
+  &__wrapper
+    width: 100%
+    height: 232px
+  &__pagination
+    width: 80px
+    height: 66px
+
+.mini-slide
+  margin-bottom: 20px
+  &__wrapper
+    height: 66px
+  &__box
+    width: 80px
+    border-radius: 10px
+    overflow: hidden
+    opacity: 1
+    transition: opacity 0.3s ease 0s
+
+.mini-slide__box.swiper-slide-thumb-active
+  opacity: 0.5
+
+.description
+  margin-bottom: 20px
+  &__wrapper
+    display: flex
+    align-items: center
+  &__delivery
+    font-size: 15px
+    margin-right: 4px
+    margin-bottom: 12px
+  &__text-bold
+    font-weight: 700
+  &__flag
+    width: 12px
+    height: 9px
+    @include section-bg($color-orange,'../img/za.webp')
+  &__rating
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-right: 10px
+    width: 86px
+  &__icon
+    width: 14px
+    height: 13px
+    @include section-bg('none','../img/sprite.svg#stars')
+
+.options
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    margin-bottom: 20px
+  &__form
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: calc( 50% - 6px )
+    label
+      margin-bottom: 4px
+      font-size: 10px
+    option
+      font-size: 15px
+  &__btn
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 10px
+    width: 100%
+    text-transform: uppercase
+    border-radius: 15px
+    background: #37D997
+    color: #fff
+    font-size: 30px
+    &:hover
+      box-shadow: 1px 3px 4px 0px rgba(0, 0, 0, 0.25)
+
+.form__select
+  width: 100%
+  text-align: center
+  font-size: 22px
+  font-style: normal
+  font-weight: 700
+  line-height: normal
+  text-transform: uppercase

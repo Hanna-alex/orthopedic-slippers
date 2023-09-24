@@ -1,0 +1,49 @@
+@mixin section-bg ($color:"#fff", $img:"none", $repeat:"no-repeat", $position:"center center", $size:"cover")
+  background: #{$color}
+  background-image: url("#{$img}")
+  background-repeat: #{$repeat}
+  background-position: #{$position}
+  background-size: #{$size}
+
+@mixin no-btn ($display:"inline-block", $b-radius: 0)
+  display: #{$display}
+  padding: 0
+  margin: 0
+  border: 0
+  background-color: transparent
+  border-radius: #{$b-radius}
+  cursor: pointer
+  appearance: none
+
+@mixin font-face($name, $file, $weight: 400, $style: normal)
+  @font-face
+    font-family: "#{$name}"
+    src: local("#{$file}"), url('../fonts/#{$file}.woff2') format('woff2'), url('../fonts/#{$file}.woff') format('woff')
+    font-weight: $weight
+    font-style: $style
+    font-display: swap
+
+@mixin links
+  text-decoration: none
+  color: inherit
+
+@mixin btn_anim($scaleMax:1.05, $scaleMin:0.95)
+  transform-origin: center center
+  transition: all ease-out 240ms
+
+  &:hover
+    transform: scale($scaleMax)
+
+  &:focus
+    outline: transparent
+
+  &:focus-visible
+    transform: scale($scaleMax) translateY(-5%)
+
+  &:active
+    transform: scale($scaleMin)
+
+@mixin transit ($tr:0.24)
+  transition: all #{$tr}s
+
+///*///*///*///*///*///*///*///*///*///*///*///*///*///*///*///

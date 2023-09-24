@@ -1,0 +1,68 @@
+.banner
+  position: relative
+  max-width: 100%
+  height: 281px
+  @include section-bg(#FFD1AC, '../img/banner1.webp')
+  &__container
+    height: 281px
+
+  &__box
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    border-radius: 7px
+    color: #fff
+    position: absolute
+    padding: 8px
+    min-height: 77px
+    min-width: 120px
+    max-width: 45%
+
+.timer
+  left: 13px
+  bottom: 14px
+
+  @include section-bg(#F19D2F)
+  &__text
+    font-size: 10px
+    font-weight: 700
+    text-transform: uppercase
+    margin-bottom: 8px
+    text-align: center
+  &__time
+    display: flex
+    font-size: 21px
+    font-weight: 700
+  &__box-num
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly
+    align-items: center
+
+.box-num__text
+  font-size: 10px
+
+.price
+  right: 13px
+  bottom: 14px
+  min-width: 116px
+  font-style: normal
+  font-weight: 700
+  text-transform: uppercase
+  @include section-bg(#37D997)
+  &__old
+    font-size: 18px
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%)
+      width: 89px
+      height: 3px
+      border-radius: 7px
+      background: #E27500
+  &__new
+    font-size: 22px
